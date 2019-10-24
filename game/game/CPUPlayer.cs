@@ -6,32 +6,40 @@ using System.Threading.Tasks;
 
 namespace game
 {
-    class CPUPlayer: AbstractPlayer
+    class CPUPlayer : AbstractPlayer
     {
         //member variables ( HAS A )
-        public string score;
-        private Random rand;
+       
+         private Random rand;
         public int gesturesCount;
-        public List<string> gestures;
+       
         //constructor
+        public CPUPlayer()
+        {
+            rand = new Random();
+            gesturesCount = gestures.Count;
+        }
 
+    
 
 
 
         //member methods (Can Do)
         public override void ChooseGesture()
         {
-            rand = new Random();
-            gesturesCount = gestures.Count; 
+            int CpuChoice = rand.Next(gesturesCount);
+            Console.WriteLine(gestures);
+            Console.ReadLine();
         }
 
         public override void ChooseName()
         {
-            Console.WriteLine("Ch");
+            Console.WriteLine("My Name is Wally");
+            Console.ReadLine();
         }
 
 
-
+        
 
 
     }

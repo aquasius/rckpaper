@@ -11,7 +11,7 @@ namespace game
      // member variables ( HAS A )
        public AbstractPlayer player1;
        public AbstractPlayer player2;
-       public string numberPlayers;
+       
 
 
         // constructor 
@@ -24,9 +24,9 @@ namespace game
         {
             DisplayRules();
 
-            string NumberOfPlayers = ChooseNumberPlayers();
+            string NumberPlayers = ChooseNumberPlayers();
             
-            CreatePlayers(numberPlayers);
+            CreatePlayers(NumberPlayers);
             player1.ChooseGesture();
             player2.ChooseGesture();
 
@@ -34,12 +34,7 @@ namespace game
 
             while (player1.score < 2 && player2.score < 2)
             {
-               string player1Choice = player1.ChooseGesture();
-
-                
-
-
-
+                player1.ChooseGesture();
 
             }
 
@@ -47,15 +42,16 @@ namespace game
 
 
         }
-        private void DisplayRules()
+        public void DisplayRules()
         {
             Console.WriteLine("Choose either 'Rock','Paper','Scissors','Lizard', or 'Spock'  to defeat your opponent!");
+            Console.ReadLine();
         }
         
 
         private void DetermineRoundWinner()
         { 
-            if () { }
+            //if () { }
         
         
         
@@ -64,20 +60,20 @@ namespace game
         public string ChooseNumberPlayers()
         {
             Console.WriteLine("How Many Players are Playing?");
-            string NumberOfPlayers = Console.ReadLine();
-            return NumberOfPlayers;
+            string NumberPlayers = Console.ReadLine();
+            return NumberPlayers;
         }
 
 
-        public void CreatePlayers(string NumberPlayers)
+        public void CreatePlayers(string NumberOfPlayers)
         {
-            if (NumberPlayers == "1")
+            if (NumberOfPlayers == "1")
             {
                 player1 = new Humanplayer();
                 player2 = new CPUPlayer();
 
             }
-            else if (NumberPlayers == "2")
+            else if (NumberOfPlayers == "2")
             {
                 player1 = new Humanplayer();
                 player2 = new Humanplayer();

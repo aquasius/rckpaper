@@ -10,15 +10,15 @@ namespace game
     {
         // member (Has A)
         public int score;
-        public string choices;
-        List<string> gestures;
+        public string choice;
+        public List<string> gestures;
         public string name;
         
         
         // construct 
         public AbstractPlayer()
         {
-           List< gestures = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+           gestures = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
             score = 0;
         }
 

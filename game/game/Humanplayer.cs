@@ -21,7 +21,7 @@ namespace game
         public override void ChooseGesture()
         {
             Console.WriteLine("Choose your gesture");
-           string gesture = Console.ReadLine();
+            choice = Console.ReadLine();
         }
 
        
