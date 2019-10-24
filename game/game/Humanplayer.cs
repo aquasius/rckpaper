@@ -9,7 +9,7 @@ namespace game
     class Humanplayer: AbstractPlayer
     {
         //member variables ( HAS A )
-
+        
 
 
         // constructor
@@ -20,10 +20,11 @@ namespace game
     
         public override void ChooseGesture()
         {
-            base.ChooseGesture();
+            Console.WriteLine("Choose your gesture");
+           string gesture = Console.ReadLine();
         }
-    
-    
+
+       
     
     
     }

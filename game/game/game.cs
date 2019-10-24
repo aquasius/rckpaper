@@ -24,14 +24,17 @@ namespace game
         {
             DisplayRules();
 
+            string NumberOfPlayers = ChooseNumberPlayers();
+            
             CreatePlayers(numberPlayers);
             player1.ChooseGesture();
             player2.ChooseGesture();
 
+          
 
-            while (player1.score < 2 && player2.score < 2 || player1.score < 2 && CPUPlayer.score < 2)
+            while (player1.score < 2 && player2.score < 2)
             {
-                string player1Choice = player1.ChooseGesture();
+               string player1Choice = player1.ChooseGesture();
 
                 
 
@@ -52,7 +55,7 @@ namespace game
 
         private void DetermineRoundWinner()
         { 
-            if ()
+            if () { }
         
         
         

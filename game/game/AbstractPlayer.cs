@@ -12,24 +12,29 @@ namespace game
         public int score;
         public string choices;
         List<string> gestures;
-       
-          
+        public string name;
+        
         
         // construct 
         public AbstractPlayer()
         {
-            gestures = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+           List< gestures = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
             score = 0;
         }
-        
-        
+
+
         // method(can do)
-           public virtual void ChooseGesture()
+        public abstract void ChooseGesture();
+        
+            
+        
+
+           public virtual void ChooseName()
         {
-            Console.WriteLine("Choose your gesture");
-            Console.ReadLine();
+            Console.WriteLine("Choose Name");
+            name = Console.ReadLine();
         }
-    
-    
+
+
     }
 }

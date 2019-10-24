@@ -10,8 +10,9 @@ namespace game
     {
         //member variables ( HAS A )
         public string score;
-
-
+        private Random rand;
+        public int gesturesCount;
+        public List<string> gestures;
         //constructor
 
 
@@ -20,9 +21,14 @@ namespace game
         //member methods (Can Do)
         public override void ChooseGesture()
         {
-            choices = choices[RandomNumber];
+            rand = new Random();
+            gesturesCount = gestures.Count; 
         }
 
+        public override void ChooseName()
+        {
+            Console.WriteLine("Ch");
+        }
 
 
 
