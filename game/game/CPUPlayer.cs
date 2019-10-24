@@ -9,7 +9,7 @@ namespace game
     class CPUPlayer: AbstractPlayer
     {
         //member variables ( HAS A )
-
+        public string score;
 
 
         //constructor
