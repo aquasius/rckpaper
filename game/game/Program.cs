@@ -17,18 +17,14 @@ namespace game
             // win condition 
 
             game gameStart = new game();
-            gameStart.DisplayRules();
-            string NumberOfPlayers = gameStart.ChooseNumberPlayers();
-            gameStart.CreatePlayers(NumberOfPlayers);
-            
-            CPUPlayer nameBot = new CPUPlayer();
-            nameBot.ChooseName();
 
-            Humanplayer gameGestures = new Humanplayer();
-            gameGestures.ChooseGesture();
-            
-            
-            nameBot.ChooseGesture();
+
+            //gameStart.DisplayRules();
+            //string NumberOfPlayers = gameStart.ChooseNumberPlayers();
+            //gameStart.CreatePlayers(NumberOfPlayers);
+
+            //gameStart.player1.ChooseGesture();
+            //gameStart.player2.ChooseGesture();
             
         
         

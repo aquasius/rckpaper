@@ -35,6 +35,6 @@ namespace game
             name = Console.ReadLine();
         }
 
-
+        
     }
 }

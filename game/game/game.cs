@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace game
 {
-     class game
+    class game
     {
-     // member variables ( HAS A )
-       public AbstractPlayer player1;
-       public AbstractPlayer player2;
-       
+        // member variables ( HAS A )
+        public AbstractPlayer player1;
+        public AbstractPlayer player2;
+
 
 
         // constructor 
@@ -25,17 +25,18 @@ namespace game
             DisplayRules();
 
             string NumberPlayers = ChooseNumberPlayers();
-            
+            Console.ReadLine();
+
             CreatePlayers(NumberPlayers);
             player1.ChooseGesture();
             player2.ChooseGesture();
 
-          
+
 
             while (player1.score < 2 && player2.score < 2)
             {
                 player1.ChooseGesture();
-
+                player2.ChooseGesture();
             }
 
 
@@ -47,16 +48,26 @@ namespace game
             Console.WriteLine("Choose either 'Rock','Paper','Scissors','Lizard', or 'Spock'  to defeat your opponent!");
             Console.ReadLine();
         }
-        
+
 
         private void DetermineRoundWinner()
-        { 
-            //if () { }
-        
-        
-        
-        
+        {
+            if (player1.score >= 2 || player2.score >= 2)
+            {
+                Console.WriteLine("You won!");
+                Console.ReadLine();
+            }
+
+
+
+
+
         }
+
+
+
+
+
         public string ChooseNumberPlayers()
         {
             Console.WriteLine("How Many Players are Playing?");
@@ -78,8 +89,9 @@ namespace game
                 player1 = new Humanplayer();
                 player2 = new Humanplayer();
             }
-                
+
         }
 
     }
 }
+
