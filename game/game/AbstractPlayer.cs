@@ -18,7 +18,7 @@ namespace game
         // construct 
         public AbstractPlayer()
         {
-           gestures = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+           gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
             score = 0;
         }
 

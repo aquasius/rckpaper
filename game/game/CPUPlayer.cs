@@ -28,8 +28,8 @@ namespace game
         public override void ChooseGesture()
         {
             int CpuChoice = rand.Next(gesturesCount);
-            Console.WriteLine(gestures[CpuChoice]);
-            Console.ReadLine();
+            choice = gestures[CpuChoice];
+            Console.WriteLine(choice);
 
 
         }
