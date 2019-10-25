@@ -9,8 +9,10 @@ namespace game
     class game
     {
         // member variables ( HAS A )
-        public AbstractPlayer player1;
-        public AbstractPlayer player2;
+         AbstractPlayer player1;
+         AbstractPlayer player2;
+        
+
 
 
 
@@ -30,15 +32,27 @@ namespace game
             CreatePlayers(NumberPlayers);
             player1.ChooseGesture();
             player2.ChooseGesture();
-
+            GestureRoundWin();
 
 
             while (player1.score < 2 && player2.score < 2)
             {
                 player1.ChooseGesture();
                 player2.ChooseGesture();
-            }
 
+
+            if (player1.score == 2)
+                {
+                    DetermineWinner();
+                    Console.ReadLine();
+                }
+            else if (player2.score == 2)
+                {
+                    DetermineWinner();
+                    Console.ReadLine();
+                }
+
+            }
 
 
 
@@ -50,20 +64,19 @@ namespace game
         }
 
 
-        private void DetermineRoundWinner()
+        private void DetermineWinner()
         {
-            if (player1.score >= 2 || player2.score >= 2)
+            if (player1.score >= 2)
             {
-                Console.WriteLine("You won!");
+                Console.WriteLine(player1.name + "you won!");
                 Console.ReadLine();
             }
 
-
-
-
-
+            else if (player2.score >= 2)
+            {
+                Console.WriteLine(player2.name + "you won!");
+            }
         }
-
 
 
 
@@ -92,6 +105,66 @@ namespace game
 
         }
 
+
+        public void GestureRoundWin()
+        {
+            if (player1.choice == player2.choice)
+            {
+                Console.WriteLine("You tied!");
+                Console.ReadLine();
+            }
+
+
+            else if (player1.choice == "rock" && player2.choice == "scissors" || player2.choice == "lizard")
+                {
+                player1.score++;
+                Console.WriteLine("Player 1 wins round 1!");
+                }
+            
+            else if (player1.choice == "paper" && player2.choice == "rock" || player2.choice == "spock")
+            {
+                player1.score++;
+            }
+
+            else if (player1.choice == "scissors" && player2.choice == "paper" || player2.choice =="lizard")
+            {
+                player1.score++;
+
+            }
+            else if (player1.choice == "lizard" && player2.choice == "spock" || player2.choice == "spock")
+            {
+                player1.score++;
+
+            }
+            else if (player1.choice == "spock" && player2.choice == "scissors" || player2.choice == "rock")
+            {
+                player1.score++;
+            }
+            
+            else 
+            { 
+                player2.score++; 
+            }
+                    
+
+
+
+
+        }            
+
+
+
+            
+
+
     }
+
+
+
+
+
+
+
+    
 }
 

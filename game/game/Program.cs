@@ -17,6 +17,9 @@ namespace game
             // win condition 
 
             game gameStart = new game();
+            gameStart.RunGame();
+            Console.ReadLine();
+
 
 
             //gameStart.DisplayRules();
