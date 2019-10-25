@@ -29,27 +29,31 @@ namespace game
             string NumberPlayers = ChooseNumberPlayers();
             Console.ReadLine();
 
+           
+
             CreatePlayers(NumberPlayers);
+            player1.ChooseName();
+            player2.ChooseName();
             player1.ChooseGesture();
             player2.ChooseGesture();
-            GestureRoundWin();
+            
 
 
             while (player1.score < 2 && player2.score < 2)
             {
                 player1.ChooseGesture();
                 player2.ChooseGesture();
-
-
+                GestureRoundWin();
+                
             if (player1.score == 2)
                 {
                     DetermineWinner();
-                    Console.ReadLine();
+                    
                 }
             else if (player2.score == 2)
                 {
                     DetermineWinner();
-                    Console.ReadLine();
+                    
                 }
 
             }
@@ -66,13 +70,13 @@ namespace game
 
         private void DetermineWinner()
         {
-            if (player1.score >= 2)
+            if (player1.score == 2)
             {
                 Console.WriteLine(player1.name + "you won!");
                 Console.ReadLine();
             }
 
-            else if (player2.score >= 2)
+            else if (player2.score == 2)
             {
                 Console.WriteLine(player2.name + "you won!");
             }
@@ -118,33 +122,43 @@ namespace game
             else if (player1.choice == "rock" && player2.choice == "scissors" || player2.choice == "lizard")
                 {
                 player1.score++;
-                Console.WriteLine("Player 1 wins round 1!");
+                Console.WriteLine(player1.name + "wins the round!" + " " + "Player 1's score is" + " " + player1.score);
+                Console.ReadLine();
                 }
             
             else if (player1.choice == "paper" && player2.choice == "rock" || player2.choice == "spock")
             {
                 player1.score++;
+                Console.WriteLine(player1.name + "wins the round!" + " " + "Player 1's score is" + " " + player1.score);
+                Console.ReadLine();
             }
 
             else if (player1.choice == "scissors" && player2.choice == "paper" || player2.choice =="lizard")
             {
                 player1.score++;
-
+                Console.WriteLine(player1.name + "wins the round!" + " " + "Player 1's score is" + " " + player1.score);
+                Console.ReadLine();
             }
             else if (player1.choice == "lizard" && player2.choice == "spock" || player2.choice == "spock")
             {
                 player1.score++;
-
+                Console.WriteLine(player1.name + "wins the round!" + " " + "Player 1's score is" + " " + player1.score);
+                Console.ReadLine();
             }
             else if (player1.choice == "spock" && player2.choice == "scissors" || player2.choice == "rock")
             {
                 player1.score++;
+                Console.WriteLine(player1.name + "wins the round!" + " " + "Player 1's score is" + " " + player1.score);
+                Console.ReadLine();
             }
             
             else 
             { 
-                player2.score++; 
+                player2.score++;
+                Console.WriteLine(player2.name + "wins the round!" + " " + "Player 1's score is" + player2.score);
+                Console.ReadLine();
             }
+            Console.WriteLine(player1.name + player1.score + player2.name + player2.score);
                     
 
 
