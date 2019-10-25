@@ -63,7 +63,8 @@ namespace game
         }
         public void DisplayRules()
         {
-            Console.WriteLine("Choose either 'Rock','Paper','Scissors','Lizard', or 'Spock'  to defeat your opponent!");
+            Console.WriteLine("Choose either 'Rock','Paper','Scissors','Lizard', or 'Spock'  to defeat your opponent! " +
+                "\nRock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock! \n Outsmart Wally or another human!");
             Console.ReadLine();
         }
 
@@ -72,7 +73,7 @@ namespace game
         {
             if (player1.score == 2)
             {
-                Console.WriteLine(player1.name + "you won! Congrats!");
+                Console.WriteLine(player1.name + " you won! Congrats!");
                 Console.ReadLine();
             }
 
