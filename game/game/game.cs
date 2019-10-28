@@ -75,11 +75,14 @@ namespace game
             {
                 Console.WriteLine(player1.name + " you won! Congrats!");
                 Console.ReadLine();
+                RunGame();
             }
 
             else if (player2.score == 2)
             {
                 Console.WriteLine(player2.name + "Player 2 won!");
+                Console.ReadLine();
+                RunGame();
             }
         }
 
